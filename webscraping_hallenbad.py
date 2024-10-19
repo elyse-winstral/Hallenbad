@@ -26,3 +26,5 @@ data = [date, occupancy]
 df = pd.read_csv("results.csv")
 df = pd.concat([df, pd.DataFrame([data], columns = header)], ignore_index=True)
 df.to_csv("results.csv",index=False)
+
+print("yo")
