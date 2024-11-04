@@ -2,7 +2,6 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from datetime import datetime 
-import time
 import pandas as pd
 
 driver = webdriver.Firefox()
@@ -19,7 +18,6 @@ driver.quit()
 
 header = ["Time", "Occupancy"]
 
-#UPDATE TIME PORTION OF CODE FOR STRF
 now = datetime.now()
 date = now.strftime("%a %d-%m-%Y %H:%M")
 data = [date, occupancy]
@@ -27,5 +25,3 @@ data = [date, occupancy]
 df = pd.read_csv("results.csv")
 df = pd.concat([df, pd.DataFrame([data], columns = header)], ignore_index=True)
 df.to_csv("results.csv",index=False)
-
-print("yo")
