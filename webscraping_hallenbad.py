@@ -20,7 +20,8 @@ driver.quit()
 header = ["Time", "Occupancy"]
 
 #UPDATE TIME PORTION OF CODE FOR STRF
-date = str(time.localtime().tm_mday) + "/" + str(time.localtime().tm_mon) + "-" + str(time.localtime().tm_hour) + ":" + str(time.localtime().tm_min)
+now = datetime.now()
+date = now.strftime("%a %d-%m-%Y %H:%M")
 data = [date, occupancy]
 
 df = pd.read_csv("results.csv")
