@@ -7,7 +7,7 @@ import pandas as pd
 driver = webdriver.Firefox()
 driver.implicitly_wait(5)
 
-URL = "https://www.stadt-zuerich.ch/ssd/de/index/sport/schwimmen/hallenbaeder/hallenbad_oerlikon.html"
+URL = "https://www.stadt-zuerich.ch/de/stadtleben/sport-und-erholung/sport-und-badeanlagen/hallenbaeder/oerlikon.html"
 driver.get(URL)
 
 nums = driver.find_element(By.ID, "SSD-7")
